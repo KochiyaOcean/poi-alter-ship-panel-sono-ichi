@@ -262,17 +262,17 @@ module.exports =
                     shipType = $shipTypes[shipInfo.api_stype].api_name
                     [
                       <tr key={j * 2}>
-                        <td width="17%">{shipInfo.api_name}</td>
+                        <td width="13%">{shipInfo.api_name}</td>
                         <td width="17%">Lv. {ship.api_lv}</td>
-                        <td width="24%" className="hp-data">
-                          <div>HP {"#{ship.api_nowhp} / #{ship.api_maxhp}"}</div>
+                        <td width="23%" className="hp-data">
+                          <div><hp>HP</hp> {"#{ship.api_nowhp} / #{ship.api_maxhp}"}</div>
                         </td>
                         <td  width="14%" className="material-data">
                           <div><data><span style={getMaterialStyleData ship.api_fuel / shipInfo.api_fuel_max * 100}>{ship.api_fuel}</span> / {shipInfo.api_fuel_max}</data></div>
                           <div><data><span style={getMaterialStyleData ship.api_bull / shipInfo.api_bull_max * 100}>{ship.api_bull}</span> / {shipInfo.api_bull_max}</data></div>
                         </td>
-                        <td  width="28%">
-                          <Slotitems data={ship.api_slot} />
+                        <td  width="33%">
+                          <Slotitems data={ship.api_slot} onslot={ship.api_onslot} maxeq={ship.api_maxeq} />
                         </td>
                       </tr>
                       <tr key={j * 2 + 1}>
