@@ -1,11 +1,11 @@
             [
               <tr key={j * 2}>
-                <td width="13%">{shipInfo.api_name}</td>
-                <td width="17%">Lv. {ship.api_lv}</td>
-                <td width="23%" className="hp-data">
-                  <div><hp>HP</hp> {"#{ship.api_nowhp} / #{ship.api_maxhp}"}</div>
+                <td width="16%">{shipInfo.api_name}</td>
+                <td width="19%">Lv. {ship.api_lv}</td>
+                <td width="16%" className="hp-data">
+                  <div><hp>{"#{ship.api_nowhp} / #{ship.api_maxhp}"}</hp></div>
                 </td>
-                <td  width="14%" className="material-data">
+                <td  width="15%" className="material-data">
                   <div><data><span style={getMaterialStyleData ship.api_fuel / shipInfo.api_fuel_max * 100}>{ship.api_fuel}</span> / {shipInfo.api_fuel_max}</data></div>
                   <div><data><span style={getMaterialStyleData ship.api_bull / shipInfo.api_bull_max * 100}>{ship.api_bull}</span> / {shipInfo.api_bull_max}</data></div>
                 </td>
